@@ -16,3 +16,7 @@ def create_cat(name):
 def get_all_cats():
     cats = session.query(Cat).all()
     return cats
+
+def cat_info(id):
+	cat = session.query(Cat).filter_by(id).first()
+	return cat
